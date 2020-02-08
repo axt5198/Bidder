@@ -4,15 +4,39 @@
 import sys
 import os
 import requests
+import csv
+import json
 
 # Gather our code in a main() function
 def main():
   proxiesFile = 'proxies.txt'
+  accountsFile = 'profiles.csv'
 
   proxies = readProxies(proxiesFile)
+  accounts = readAccounts(accountsFile)
+
+  print(json.dumps(accounts, indent=4))
+
+  # registered = registerAccounts(accounts)
 
 
-  
+
+def readAccounts(accountsFile):
+  if not os.path.isfile(accountsFile):
+    print(f"File does not exist. {accountsFile} Exiting.")
+    sys.exit()
+
+  accounts = []
+
+  with open(accountsFile) as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+      accounts.append(row)
+
+  return accounts
+
+
+
 def readProxies(proxiesFile):
   if not os.path.isfile(proxiesFile):
     print(f"File does not exist. {proxiesFile} Exiting.")
