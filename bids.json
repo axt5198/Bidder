@@ -1,0 +1,33 @@
+{
+    "productId":  "4a33ef38-2497-4229-8b28-c2fea95cc17c",
+    "bids": {
+      "5.5" : [
+        {
+          "price": 220.00,
+          "quantity": 12
+        },
+        {
+          "price": 225.00,
+          "quantity": 1
+        },
+        {
+          "price": 227.00,
+          "quantity": 15
+        }
+      ],
+      "7.5" : [
+        {
+          "price": 220.00,
+          "quantity": 12
+        },
+        {
+          "price": 225.00,
+          "quantity": 1
+        },
+        {
+          "price": 227.00,
+          "quantity": 15
+        }
+      ]
+    }
+  }
